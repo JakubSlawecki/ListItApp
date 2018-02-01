@@ -8,22 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		236582D92021E20C0020756D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236582D82021E20C0020756D /* AppDelegate.swift */; };
-		236582DB2021E20C0020756D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236582DA2021E20C0020756D /* ViewController.swift */; };
+		236582DB2021E20C0020756D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236582DA2021E20C0020756D /* MainVC.swift */; };
 		236582DE2021E20C0020756D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236582DC2021E20C0020756D /* Main.storyboard */; };
 		236582E12021E20C0020756D /* ListItApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 236582DF2021E20C0020756D /* ListItApp.xcdatamodeld */; };
 		236582E32021E20C0020756D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 236582E22021E20C0020756D /* Assets.xcassets */; };
 		236582E62021E20C0020756D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236582E42021E20C0020756D /* LaunchScreen.storyboard */; };
+		236582F52021F1110020756D /* Store+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236582ED2021F1110020756D /* Store+CoreDataClass.swift */; };
+		236582F62021F1110020756D /* Store+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236582EE2021F1110020756D /* Store+CoreDataProperties.swift */; };
+		236582F72021F1110020756D /* ItemType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236582EF2021F1110020756D /* ItemType+CoreDataClass.swift */; };
+		236582F82021F1110020756D /* ItemType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236582F02021F1110020756D /* ItemType+CoreDataProperties.swift */; };
+		236582F92021F1110020756D /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236582F12021F1110020756D /* Item+CoreDataClass.swift */; };
+		236582FA2021F1110020756D /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236582F22021F1110020756D /* Item+CoreDataProperties.swift */; };
+		236582FB2021F1110020756D /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236582F32021F1110020756D /* Image+CoreDataClass.swift */; };
+		236582FC2021F1110020756D /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236582F42021F1110020756D /* Image+CoreDataProperties.swift */; };
+		2365830320220FA50020756D /* Proxima Nova Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2365830020220FA40020756D /* Proxima Nova Light.otf */; };
+		2365830420220FA50020756D /* Proxima Nova Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2365830120220FA50020756D /* Proxima Nova Bold.otf */; };
+		2365830520220FA50020756D /* Proxima Nova Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2365830220220FA50020756D /* Proxima Nova Regular.otf */; };
+		23658308202215610020756D /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23658307202215610020756D /* MaterialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		236582D52021E20C0020756D /* ListItApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListItApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		236582D82021E20C0020756D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		236582DA2021E20C0020756D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		236582DA2021E20C0020756D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		236582DD2021E20C0020756D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		236582E02021E20C0020756D /* ListItApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ListItApp.xcdatamodel; sourceTree = "<group>"; };
 		236582E22021E20C0020756D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		236582E52021E20C0020756D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		236582E72021E20C0020756D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		236582ED2021F1110020756D /* Store+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataClass.swift"; sourceTree = "<group>"; };
+		236582EE2021F1110020756D /* Store+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		236582EF2021F1110020756D /* ItemType+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataClass.swift"; sourceTree = "<group>"; };
+		236582F02021F1110020756D /* ItemType+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		236582F12021F1110020756D /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		236582F22021F1110020756D /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		236582F32021F1110020756D /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
+		236582F42021F1110020756D /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2365830020220FA40020756D /* Proxima Nova Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Light.otf"; sourceTree = "<group>"; };
+		2365830120220FA50020756D /* Proxima Nova Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Bold.otf"; sourceTree = "<group>"; };
+		2365830220220FA50020756D /* Proxima Nova Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Regular.otf"; sourceTree = "<group>"; };
+		23658307202215610020756D /* MaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +80,11 @@
 		236582D72021E20C0020756D /* ListItApp */ = {
 			isa = PBXGroup;
 			children = (
+				236583062022151C0020756D /* View */,
+				236582FD2021F2A30020756D /* Model */,
+				236582FF20220F550020756D /* Ressources */,
 				236582D82021E20C0020756D /* AppDelegate.swift */,
-				236582DA2021E20C0020756D /* ViewController.swift */,
+				236582DA2021E20C0020756D /* MainVC.swift */,
 				236582DC2021E20C0020756D /* Main.storyboard */,
 				236582E22021E20C0020756D /* Assets.xcassets */,
 				236582E42021E20C0020756D /* LaunchScreen.storyboard */,
@@ -65,6 +92,47 @@
 				236582DF2021E20C0020756D /* ListItApp.xcdatamodeld */,
 			);
 			path = ListItApp;
+			sourceTree = "<group>";
+		};
+		236582FD2021F2A30020756D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				236582ED2021F1110020756D /* Store+CoreDataClass.swift */,
+				236582EF2021F1110020756D /* ItemType+CoreDataClass.swift */,
+				236582F12021F1110020756D /* Item+CoreDataClass.swift */,
+				236582F32021F1110020756D /* Image+CoreDataClass.swift */,
+				236582FE2021F2B50020756D /* Generated */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		236582FE2021F2B50020756D /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				236582EE2021F1110020756D /* Store+CoreDataProperties.swift */,
+				236582F02021F1110020756D /* ItemType+CoreDataProperties.swift */,
+				236582F22021F1110020756D /* Item+CoreDataProperties.swift */,
+				236582F42021F1110020756D /* Image+CoreDataProperties.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		236582FF20220F550020756D /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				2365830120220FA50020756D /* Proxima Nova Bold.otf */,
+				2365830020220FA40020756D /* Proxima Nova Light.otf */,
+				2365830220220FA50020756D /* Proxima Nova Regular.otf */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		236583062022151C0020756D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23658307202215610020756D /* MaterialView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,8 +195,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				236582E62021E20C0020756D /* LaunchScreen.storyboard in Resources */,
+				2365830320220FA50020756D /* Proxima Nova Light.otf in Resources */,
 				236582E32021E20C0020756D /* Assets.xcassets in Resources */,
+				2365830520220FA50020756D /* Proxima Nova Regular.otf in Resources */,
 				236582DE2021E20C0020756D /* Main.storyboard in Resources */,
+				2365830420220FA50020756D /* Proxima Nova Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,9 +210,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				236582DB2021E20C0020756D /* ViewController.swift in Sources */,
+				236582F72021F1110020756D /* ItemType+CoreDataClass.swift in Sources */,
+				236582F62021F1110020756D /* Store+CoreDataProperties.swift in Sources */,
+				236582DB2021E20C0020756D /* MainVC.swift in Sources */,
+				23658308202215610020756D /* MaterialView.swift in Sources */,
+				236582F52021F1110020756D /* Store+CoreDataClass.swift in Sources */,
 				236582D92021E20C0020756D /* AppDelegate.swift in Sources */,
+				236582F82021F1110020756D /* ItemType+CoreDataProperties.swift in Sources */,
+				236582FA2021F1110020756D /* Item+CoreDataProperties.swift in Sources */,
+				236582F92021F1110020756D /* Item+CoreDataClass.swift in Sources */,
 				236582E12021E20C0020756D /* ListItApp.xcdatamodeld in Sources */,
+				236582FB2021F1110020756D /* Image+CoreDataClass.swift in Sources */,
+				236582FC2021F1110020756D /* Image+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
