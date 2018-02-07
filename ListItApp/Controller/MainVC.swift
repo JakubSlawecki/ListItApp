@@ -25,23 +25,47 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         tableView.delegate = self
         tableView.dataSource = self
         
+        //generateTestData()
+        attemptFetch()
+        
         
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemCell
+        configureCell(cell: cell, indexPath: indexPath as NSIndexPath)
+        return cell
+    }
+    
+    func configureCell(cell: ItemCell, indexPath: NSIndexPath) {
+        
+        let item = controller.object(at: indexPath as IndexPath)
+        cell.configureCell(item: item)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
+        if let sections = controller.sections {
+            let sectionInfo = sections[section]
+            return sectionInfo.numberOfObjects
+        }
         return 0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
+        if let sections = controller.sections {
+            return sections.count
+        }
         return 0
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 102  // hight of our cell
+    }
+    
     
     func attemptFetch() {
         
@@ -50,6 +74,10 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         fetchRequest.sortDescriptors = [dateSort]
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        
+        controller.delegate = self
+        
+        self.controller = controller // this is setting the "outside controller" to "inside controller"
         
         do {
             
@@ -87,7 +115,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         case.update:
             if let indexPath = indexPath {
                 let cell = tableView.cellForRow(at: indexPath) as! ItemCell
-                // update the cell data
+                configureCell(cell: cell, indexPath: indexPath as NSIndexPath)
+                // if we will update cell it ll goeas through configurecell func again
             }
         
         case.move:
@@ -101,6 +130,40 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         }
     }
     
+    
+    func generateTestData() {
+        
+        let item = Item(context: context)
+        item.title = "AirPods"
+        item.price = 700
+        item.details = "Wireless. Effortless. Magical. Just take them out and they’re ready to use it"
+        
+        
+        let item2 = Item(context: context)
+        item2.title = "Michelin Pilot Sport Tires"
+        item2.price = 1300
+        item2.details = "2 used ones and 2 brand new ones"
+        
+        
+        let item3 = Item(context: context)
+        item3.title = "Apple iWatch"
+        item3.price = 900
+        item3.details = "Used one"
+        
+        
+        let item4 = Item(context: context)
+        item4.title = "Yaht"
+        item4.price = 800000
+        item4.details = "Boat"
+        
+        
+        let item5 = Item(context: context)
+        item5.title = "AirPods"
+        item5.price = 700
+        item5.details = "Wireless. Effortless. Magical. Just take them out and they’re ready to use it"
+        
+        ad.saveContext()
+    }
     
     
     

@@ -26,6 +26,8 @@
 		2365830520220FA50020756D /* Proxima Nova Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2365830220220FA50020756D /* Proxima Nova Regular.otf */; };
 		23658308202215610020756D /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23658307202215610020756D /* MaterialView.swift */; };
 		23A1F15C2023310D00C39DB3 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1F15B2023310D00C39DB3 /* ItemCell.swift */; };
+		23A1F15F20249F5700C39DB3 /* ItemDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1F15E20249F5700C39DB3 /* ItemDetailsVC.swift */; };
+		23A1F1612024B5EA00C39DB3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1F1602024B5EA00C39DB3 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		2365830220220FA50020756D /* Proxima Nova Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Regular.otf"; sourceTree = "<group>"; };
 		23658307202215610020756D /* MaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		23A1F15B2023310D00C39DB3 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		23A1F15E20249F5700C39DB3 /* ItemDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsVC.swift; sourceTree = "<group>"; };
+		23A1F1602024B5EA00C39DB3 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,11 +86,11 @@
 		236582D72021E20C0020756D /* ListItApp */ = {
 			isa = PBXGroup;
 			children = (
-				236583062022151C0020756D /* View */,
 				236582FD2021F2A30020756D /* Model */,
+				236583062022151C0020756D /* View */,
+				23A1F15D20249EEE00C39DB3 /* Controller */,
 				236582FF20220F550020756D /* Ressources */,
 				236582D82021E20C0020756D /* AppDelegate.swift */,
-				236582DA2021E20C0020756D /* MainVC.swift */,
 				236582DC2021E20C0020756D /* Main.storyboard */,
 				236582E22021E20C0020756D /* Assets.xcassets */,
 				236582E42021E20C0020756D /* LaunchScreen.storyboard */,
@@ -134,8 +138,18 @@
 			children = (
 				23658307202215610020756D /* MaterialView.swift */,
 				23A1F15B2023310D00C39DB3 /* ItemCell.swift */,
+				23A1F1602024B5EA00C39DB3 /* CustomTextField.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		23A1F15D20249EEE00C39DB3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				236582DA2021E20C0020756D /* MainVC.swift */,
+				23A1F15E20249F5700C39DB3 /* ItemDetailsVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,11 +235,13 @@
 				236582F52021F1110020756D /* Store+CoreDataClass.swift in Sources */,
 				236582D92021E20C0020756D /* AppDelegate.swift in Sources */,
 				236582F82021F1110020756D /* ItemType+CoreDataProperties.swift in Sources */,
+				23A1F15F20249F5700C39DB3 /* ItemDetailsVC.swift in Sources */,
 				236582FA2021F1110020756D /* Item+CoreDataProperties.swift in Sources */,
 				236582F92021F1110020756D /* Item+CoreDataClass.swift in Sources */,
 				236582E12021E20C0020756D /* ListItApp.xcdatamodeld in Sources */,
 				236582FB2021F1110020756D /* Image+CoreDataClass.swift in Sources */,
 				236582FC2021F1110020756D /* Image+CoreDataProperties.swift in Sources */,
+				23A1F1612024B5EA00C39DB3 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
