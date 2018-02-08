@@ -58,7 +58,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kl5-Xj-P52">
                                                     <rect key="frame" x="1" y="6" width="398" height="89.666666666666671"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Zrzut ekranu 2018-01-31 o 16.12.27" translatesAutoresizingMaskIntoConstraints="NO" id="4GH-C9-zp0">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Zrzut ekranu 2018-01-31 o 16.12.27" translatesAutoresizingMaskIntoConstraints="NO" id="4GH-C9-zp0">
                                                             <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="90" id="1tF-4v-WOR"/>
@@ -200,6 +200,9 @@
                                     <constraint firstAttribute="height" constant="120" id="3Gl-Fi-Xvn"/>
                                     <constraint firstAttribute="width" constant="120" id="ggK-qJ-JY3"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="addImagePressed:" destination="tKs-hm-acZ" eventType="touchUpInside" id="jnu-Vk-3FV"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="AoV-kG-sWX" customClass="CustomTextField" customModule="ListItApp" customModuleProvider="target">
                                 <rect key="frame" x="114.66666666666669" y="234" width="185" height="30"/>
@@ -322,6 +325,7 @@
                         <outlet property="PriceField" destination="QcL-Ms-bPX" id="6fy-Tw-551"/>
                         <outlet property="detailsField" destination="Mq3-Nd-5E1" id="DSs-8E-XvM"/>
                         <outlet property="storePicker" destination="uV4-aT-Cyi" id="Yt0-sp-qtv"/>
+                        <outlet property="thumbImg" destination="4CG-gS-Q3g" id="q5b-o2-Ueh"/>
                         <outlet property="titleField" destination="AoV-kG-sWX" id="MKr-Xj-wBQ"/>
                     </connections>
                 </viewController>

@@ -47,5 +47,7 @@
 		<string>Proxima Nova Light.otf</string>
 		<string>Proxima Nova Regular.otf</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Picture your dreams Bae!</string>
 </dict>
 </plist>
