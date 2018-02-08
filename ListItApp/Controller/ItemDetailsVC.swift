@@ -20,6 +20,7 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
     
 
     var stores = [Store]()  // etnity
+    var itemToEdit: Item?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +60,10 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
         
         getStores()
         
+        if itemToEdit != nil {
+            loadItemData()
+        }
+        
     
         
     }
@@ -96,9 +101,22 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
     }
     
     
+    // adding new items to list:
+    
+    
     @IBAction func savePressed(_ sender: UIButton) {
         
-        let item = Item(context: context)
+        var item: Item!
+                                        //that will add new item if item to edit is empty
+                                        //and update exiting item if its not empty ;)
+        
+        if itemToEdit == nil {
+            
+            item = Item(context: context)
+        } else {
+            
+            item = itemToEdit  // coreData ll take care of updating already existing one
+        }
         
         if let title = titleField.text {
             
@@ -107,7 +125,7 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
         
         if let price = PriceField.text {
             
-            item.price = (price as NSString).doubleValue  // price is in double value, so there is need in conversion
+            item.price = (price as NSString).doubleValue  // price is in double value,that will take care of conversion to string
         }
         
         if let details = detailsField.text {
@@ -127,6 +145,44 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
     }
     
     
+    @IBAction func deleteBtnPressed(_ sender: UIBarButtonItem) {
+        
+        if itemToEdit != nil { // if we have something
+            context.delete(itemToEdit!) // so simple with coreData!
+            ad.saveContext()
+        }
+         _ = navigationController?.popViewController(animated: true)
+    }
+    
+    
+    func loadItemData() {
+        
+        if let item = itemToEdit {
+            
+            titleField.text = item.title
+            PriceField.text = "\(item.price)"
+            detailsField.text = item.details
+            
+            // that loop will assign store to storePicker
+            if let store = item.toStore {
+                
+                var index = 0
+                repeat {
+                    
+                    let s = stores[index]
+                    if s.name == store.name {
+                        
+                        storePicker.selectRow(index, inComponent: 0, animated: false)
+                        break
+                    }
+                    index += 1
+            
+                    
+                } while (index < stores.count)
+            }
+            
+        }
+    }
     
     
     

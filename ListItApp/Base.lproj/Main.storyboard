@@ -48,7 +48,7 @@
                                 <color key="tintColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="102" id="XaI-zN-Vtu" customClass="ItemCell" customModule="ListItApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="102" id="XaI-zN-Vtu" customClass="ItemCell" customModule="ListItApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="400" height="102"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XaI-zN-Vtu" id="7xo-j7-POb">
@@ -313,6 +313,9 @@
                         <barButtonItem key="backBarButtonItem" title="back" id="jbE-Jb-f8j"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="Q3W-Zu-4QT">
                             <color key="tintColor" red="0.9959825873374939" green="0.99621325731277466" blue="0.99187678098678589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="deleteBtnPressed:" destination="tKs-hm-acZ" id="qf2-h2-TUj"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
