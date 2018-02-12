@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var storePicker: UIPickerView!
     @IBOutlet weak var titleField: CustomTextField!
@@ -39,6 +39,8 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         
+        self.detailsField.delegate = self  // need that to hide keybord, UITextFieldDelegate that one too
+        
 //        let store = Store(context: context)
 //        store.name = "Allegro"
 //
@@ -60,6 +62,9 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
 //        let store7 = Store(context: context)
 //        store7.name = "Gymshark.com"
 //
+//        let store8 = Store(context: context)
+//        store8.name = "Other"
+//
 //        ad.saveContext()
         // added test data to coreData
         
@@ -69,7 +74,8 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
             loadItemData()
         }
         
-    
+        
+        detailsField.returnKeyType = UIReturnKeyType.done
         
     }
     
@@ -104,6 +110,8 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
             // handle the error
         }
     }
+    
+    
     
     
     // adding new items to list:
@@ -212,10 +220,48 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
         imagePicker.dismiss(animated: true, completion: nil)
     }
     
+    func addStore() {
+        
+        //        let store = Store(context: context)
+        //        store.name = "Allegro"
+        //
+        //        let store2 = Store(context: context)
+        //        store2.name = "eBay"
+        //
+        //        let store3 = Store(context: context)
+        //        store3.name = "Zalando Lounge"
+        //
+        //        let store4 = Store(context: context)
+        //        store4.name = "Zalando"
+        //
+        //        let store5 = Store(context: context)
+        //        store5.name = "OLX"
+        //
+        //        let store6 = Store(context: context)
+        //        store6.name = "OPONEO.PL"
+        //
+        //        let store7 = Store(context: context)
+        //        store7.name = "Gymshark.com"
+        //
+        //        let store8 = Store(context: context)
+        //        store8.name = "Other"
+        
+        //        ad.saveContext()   to do
+    }
     
     
+    // Hide keyboard when user touches outside keyboard
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    // Hide keyboard when user presses return/done key
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        detailsField.resignFirstResponder()
+        return(true)
+        
+    }
     
 }
 
